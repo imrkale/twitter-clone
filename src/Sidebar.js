@@ -11,13 +11,26 @@ import ListAltIcon from "@material-ui/icons/ListAlt";
 import PermIdentityIcon from "@material-ui/icons/PermIdentity";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import { Button } from "@material-ui/core";
+import {useHistory,Link} from 'react-router-dom'
+
 function Sidebar() {
+   const history=useHistory();
+   const handleChange=(text)=>{
+       if(text=="Home")
+       {
+           history.push("/");
+       }
+       else
+       {
+           history.push("/news");
+       }
+   }
     return (
         <div className="sideBar">
             <TwitterIcon className="sidebar__twitterIcon" />
-
-                <SidebarOption active Icon={HomeIcon} text="Home" />
-                <SidebarOption Icon={SearchIcon} text="Explore" />
+                <a onClick={handleChange("Home")}><SidebarOption active Icon={HomeIcon} text="Home" /></a>
+                <a onClick={handleChange("News")}><SidebarOption Icon={SearchIcon} text="News"/></a>
+                
                 <SidebarOption Icon={NotificationsNoneIcon} text="Notifications" />
                 <SidebarOption Icon={MailOutlineIcon} text="Messages" />
                 <SidebarOption Icon={BookmarkBorderIcon} text="Bookmarks" />

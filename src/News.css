@@ -1,0 +1,34 @@
+.news {
+  flex: 0.4;
+  border-right: 1px solid var(--twitter-background);
+  min-width: fit-content;
+  overflow-y: scroll;
+}
+.news::-webkit-scrollbar {
+  display: none;
+}
+.news {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.post {
+  display: flex;
+  flex-direction: column;
+  max-width: 550px;
+  min-width: 500px;
+  margin: 10px;
+}
+.post > h1 {
+  font-size: large;
+  padding: 10px;
+  text-align: center;
+}
+.post > p {
+  font-size: small;
+  padding: 10px;
+  text-align: center;
+}
+.post > img {
+  object-fit: cover;
+  width: 100%;
+}

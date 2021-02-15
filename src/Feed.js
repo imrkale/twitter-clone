@@ -30,8 +30,8 @@ function Feed() {
                 username={post.username}
                 verified={post.verified}
                 text={post.text}
-                avatar={post.avatar}
-                image={post.image}
+                avatar={post.avatar?post.avatar:""}
+                image={post.image?post.image:""}
             />
         ))}
             </FlipMove>

@@ -16,7 +16,7 @@ function TweetBox() {
           text: tweetMessage,
           image: tweetImage,
           avatar:
-            {image},
+            tweetImage?tweetImage:"",
         });
     
         setTweetMessage("");
